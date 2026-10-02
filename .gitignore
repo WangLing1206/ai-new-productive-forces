@@ -4,10 +4,22 @@ node_modules/
 # 构建产物与 QA 截图
 build/
 
-# 视频制作工作目录（ffmpeg 二进制、原始录制、成片）
-video/
+# 视频工程：保留脚本，排除二进制与产物
+video/ffmpeg-9.0.2-essentials_build/
+video/raw/
+video/out/
+video/frames/
+video/chk/
+video/chk2/
+video/probe/
+video/*.zip
+video/timeline.json
 
 # 其他
 .DS_Store
 Thumbs.db
 *.log
+
+# 交付物（视频较大，单独提交时手动处理）
+deliverables/*.mp4
+deliverables/*.zip
