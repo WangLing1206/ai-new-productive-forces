@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>数据看板 · 智启新质 — 人工智能赋能新质生产力</title>
+<meta name="description" content="响应式数据看板：人工智能产业规模、算力、大模型、数字经济、就业结构、国际对比等 12 组可视化图表，支持分类筛选与数据表切换。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b1a35'/%3E%3Cg fill='none' stroke='%23d8ae4e' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='2.8'/%3E%3Ccircle cx='5' cy='6' r='1.7'/%3E%3Ccircle cx='19' cy='6' r='1.7'/%3E%3Ccircle cx='5' cy='18' r='1.7'/%3E%3Ccircle cx='19' cy='18' r='1.7'/%3E%3Cpath d='M6.4 7.2 9.6 10M17.6 7.2 14.4 10M6.4 16.8 9.6 14M17.6 16.8 14.4 14'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+<div class="bg-layer" aria-hidden="true"></div>
+
+<header class="dash-head">
+  <div class="wrap">
+    <div class="eyebrow">Data Board · 响应式数据看板</div>
+    <h1>人工智能 · 新质生产力 <span class="grad-text">全景数据看板</span></h1>
+    <p class="dh-sub">
+      12 组可视化图表，覆盖基础设施、产业经济、创新专利、行业效率、就业人才与国际对比六个维度。
+      所有数据均来自政府统计公报、国家部委发布口径与国际权威机构公开报告，逐项标注来源与统计口径；
+      统计事实与预测数据分类标记。<strong style="color:var(--ink)">支持分类筛选、图表/数据表切换与打印导出。</strong>
+    </p>
+    <div class="dash-meta">
+      <div><b>2019—2026</b>数据时间跨度</div>
+      <div><b>24</b>权威数据来源</div>
+      <div><b>12</b>可视化图表</div>
+      <div><b>8</b>核心指标</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- 筛选条 -->
+  <div class="filterbar" id="filterbar">
+    <div class="chips" id="chips"></div>
+    <div class="fb-right">
+      <div class="seg" id="viewSeg">
+        <button data-view="chart" class="on">图表</button>
+        <button data-view="table">数据表</button>
+      </div>
+      <button class="icon-btn" id="btnPrint" data-tip="打印 / 导出 PDF">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M8 14h8v7H8z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- KPI -->
+  <div class="kpi-grid" id="kpiGrid"></div>
+
+  <!-- 图表网格 -->
+  <div class="dash" id="dash"></div>
+
+  <!-- 数据表 -->
+  <div class="table-wrap" id="tableWrap"></div>
+
+  <!-- 脚注 -->
+  <div class="footnotes">
+    <div class="sec-head mt34">
+      <div class="sec-titles">
+        <h2 style="font-size:clamp(19px,2.2vw,26px)">数据说明与口径提示</h2>
+        <p>使用任何数据前，请先阅读以下说明</p>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <div id="footnotes"></div>
+    <div class="flex between center wrapf mt34">
+      <p class="small muted">完整来源清单（含原文链接）请见「数据来源」页。</p>
+      <a class="btn btn-ghost" href="sources.html">查看全部数据来源
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/vendor/echarts.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

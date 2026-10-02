@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>翻页演示 · 智启新质 — 人工智能赋能新质生产力</title>
+<meta name="description" content="翻页式数据演示：17页可视化，从算力底座到产业跃升，呈现人工智能作为新质生产力的作用与意义。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b1a35'/%3E%3Cg fill='none' stroke='%23d8ae4e' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='2.8'/%3E%3Ccircle cx='5' cy='6' r='1.7'/%3E%3Ccircle cx='19' cy='6' r='1.7'/%3E%3Ccircle cx='5' cy='18' r='1.7'/%3E%3Ccircle cx='19' cy='18' r='1.7'/%3E%3Cpath d='M6.4 7.2 9.6 10M17.6 7.2 14.4 10M6.4 16.8 9.6 14M17.6 16.8 14.4 14'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/deck.css">
+</head>
+<body class="deck-mode">
+<div class="bg-layer" aria-hidden="true"></div>
+
+<main class="stage" id="stage"></main>
+
+<!-- 控制条 -->
+<div class="deck-ui" id="deckUI">
+  <div class="du-group">
+    <button class="du-btn" id="btnPrev" aria-label="上一页">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>
+    </button>
+    <span class="du-count"><b id="curNo">01</b><i>/</i><span id="totNo">17</span></span>
+    <button class="du-btn" id="btnNext" aria-label="下一页">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+  <div class="du-group">
+    <button class="du-btn" id="btnNav" aria-label="目录" data-tip="目录 (S)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <button class="du-btn" id="btnPlay" aria-label="自动播放" data-tip="自动播放 (P)">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <button class="du-btn" id="btnFull" aria-label="全屏" data-tip="全屏 (F)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+    <a class="du-btn" href="index.html" aria-label="返回总览" data-tip="返回总览">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 11l9-8 9 8M6 10v10h12V10"/></svg>
+    </a>
+  </div>
+</div>
+<div class="du-ticks" id="ticks" aria-hidden="true"></div>
+
+<!-- 目录浮层 -->
+<div class="deck-nav" id="deckNav">
+  <h3>目录 · CONTENTS</h3>
+  <div class="deck-nav-grid" id="navGrid"></div>
+</div>
+
+<script src="assets/vendor/echarts.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/deck.js"></script>
+</body>
+</html>

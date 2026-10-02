@@ -1,0 +1,73 @@
+/* ============================================================================
+   智启新质 · 数据来源页 (sources.css)
+   ==========================================================================*/
+
+.src-head { padding: calc(var(--nav-h) + 46px) 0 34px; }
+.src-head h1 { font-size: clamp(26px, 3.6vw, 46px); }
+.src-head .sh-lead { font-size: clamp(14px, 1.5vw, 16.5px); color: var(--ink-2); margin-top: 14px; max-width: 88ch; line-height: 1.95; }
+
+/* 原则 */
+.principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.principle { padding: 24px 22px; }
+.principle .p-no { font-family: var(--font-num); font-size: 12px; letter-spacing: .16em; color: var(--gold); margin-bottom: 12px; }
+.principle h3 { font-size: 17px; margin-bottom: 10px; }
+.principle p { font-size: 13px; color: var(--ink-3); line-height: 1.9; }
+
+/* 来源清单 */
+.src-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 14px; }
+.src-item {
+  display: flex; gap: 14px; padding: 17px 18px; border-radius: 10px; border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--ink) 3.5%, transparent);
+  transition: .3s var(--ease);
+}
+.src-item:hover { border-color: var(--line-hi); background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.src-item .si-no {
+  font-family: var(--font-num); font-size: 13px; font-weight: 700; color: var(--gold);
+  min-width: 26px; padding-top: 2px;
+}
+.src-item .si-body { min-width: 0; flex: 1; }
+.src-item .si-org { font-size: 12px; color: var(--gold); letter-spacing: .03em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.src-item .si-name { font-size: 13.5px; color: var(--ink); margin-top: 6px; line-height: 1.7; }
+.src-item .si-foot { display: flex; align-items: center; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.src-item .si-year { font-family: var(--font-num); font-size: 11.5px; color: var(--ink-4); }
+.src-item .si-link {
+  font-size: 11.5px; color: var(--ink-3); display: inline-flex; align-items: center; gap: 5px;
+  border-bottom: 1px dashed var(--line-hi); transition: .25s; max-width: 100%;
+}
+.src-item .si-link:hover { color: var(--gold); }
+.src-item .si-link svg { width: 11px; height: 11px; flex-shrink: 0; }
+.src-item .si-url { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 230px; }
+
+/* 类型标签 */
+.t-official { color: var(--red-hi); border-color: rgba(200, 16, 46, .4); background: rgba(200, 16, 46, .09); }
+.t-research { color: var(--cyan); border-color: rgba(69, 207, 232, .4); background: rgba(69, 207, 232, .09); }
+.t-intl { color: var(--violet); border-color: rgba(139, 127, 232, .42); background: rgba(139, 127, 232, .1); }
+.t-media { color: var(--green); border-color: rgba(53, 192, 142, .4); background: rgba(53, 192, 142, .09); }
+
+/* 标记体系说明 */
+.legend-sys { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.ls-item { padding: 18px; border-radius: 10px; border: 1px solid var(--line); }
+.ls-item .ls-tag { margin-bottom: 10px; display: inline-flex; }
+.ls-item p { font-size: 12px; color: var(--ink-3); line-height: 1.8; }
+
+/* 引用格式 */
+.cite-block {
+  font-family: var(--font-serif); font-size: 13.5px; line-height: 2.05; color: var(--ink-2);
+  background: color-mix(in srgb, var(--bg-2) 46%, transparent); border-left: 3px solid var(--gold);
+  padding: 20px 24px; border-radius: 0 10px 10px 0;
+}
+
+/* 技术说明表 */
+.tech-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.tech-item { padding: 18px 20px; border-radius: 10px; border: 1px solid var(--line); background: color-mix(in srgb, var(--ink) 3.5%, transparent); }
+.tech-item h4 { font-size: 13.5px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.tech-item h4 svg { width: 14px; height: 14px; color: var(--gold); flex-shrink: 0; }
+.tech-item p { font-size: 12px; color: var(--ink-3); line-height: 1.85; }
+
+@media (max-width: 1024px) {
+  .principles { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .src-list { grid-template-columns: minmax(0, 1fr); }
+  .src-item .si-url { max-width: 150px; }
+}

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>智启新质 · 人工智能赋能新质生产力全景数据观察</title>
+<meta name="description" content="从算力底座到产业跃升：用可核查的权威数据，可视化呈现人工智能作为新质生产力的作用与意义。涵盖算力、大模型、产业规模、数字经济、行业效率、就业结构与政策路线。">
+<meta name="keywords" content="人工智能,新质生产力,数据可视化,人工智能+,全要素生产率,算力,大模型,数字经济">
+<meta name="author" content="智启新质 · 数据可视化研究报告">
+<meta property="og:title" content="智启新质 · 人工智能赋能新质生产力全景数据观察">
+<meta property="og:description" content="用可核查的数据呈现人工智能作为新质生产力的作用与意义。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b1a35'/%3E%3Cg fill='none' stroke='%23d8ae4e' stroke-width='1.5'%3E%3Ccircle cx='12' cy='12' r='2.8'/%3E%3Ccircle cx='5' cy='6' r='1.7'/%3E%3Ccircle cx='19' cy='6' r='1.7'/%3E%3Ccircle cx='5' cy='18' r='1.7'/%3E%3Ccircle cx='19' cy='18' r='1.7'/%3E%3Cpath d='M6.4 7.2 9.6 10M17.6 7.2 14.4 10M6.4 16.8 9.6 14M17.6 16.8 14.4 14'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+<div class="bg-layer" aria-hidden="true"></div>
+
+<main>
+  <!-- ============================================================ 封面 -->
+  <section class="hero" id="top">
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge reveal"><b>2026</b> 数据可视化研究报告 · 全 6 章</div>
+          <h1 class="hero-title reveal d1">智启<span class="accent">新质</span></h1>
+          <p class="hero-sub reveal d2">人工智能，正在成为新质生产力的<b>核心引擎</b></p>
+          <p class="hero-sub-en reveal d2">FROM COMPUTING POWER TO PRODUCTIVITY POWER</p>
+          <p class="hero-lead reveal d4">
+            新质生产力以<b>全要素生产率大幅提升</b>为核心标志。而人工智能，是当下唯一同时改变
+            <em>劳动资料</em>、<em>劳动对象</em>与<em>劳动者</em>的技术变量——
+            它把算力变成新的基础设施，把数据变成新的生产要素，把算法变成新的生产工具。
+            本报告以可核查的公开数据，回答一个问题：<em>人工智能究竟在多大程度上、以何种方式，成为新质生产力。</em>
+          </p>
+          <div class="hero-cta reveal d5">
+            <a class="btn btn-primary" href="#ch-def">
+              开始阅读
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="deck.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              翻页演示版
+            </a>
+            <a class="btn btn-ghost" href="dashboard.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></svg>
+              数据看板
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-quote reveal-r d3">
+          <p>
+            "概括地说，新质生产力是<b class="q-key">创新起主导作用</b>，摆脱传统经济增长方式、生产力发展路径，具有<b class="q-key">高科技、高效能、高质量</b>特征，符合新发展理念的先进生产力质态。它由技术革命性突破、生产要素创新性配置、产业深度转型升级而催生，以劳动者、劳动资料、劳动对象及其优化组合的跃升为基本内涵，<b class="q-key">以全要素生产率大幅提升为核心标志</b>。"
+          </p>
+          <div class="q-src">习近平在中共中央政治局第十一次集体学习时的讲话 · 2024年1月31日</div>
+        </aside>
+      </div>
+
+      <div class="hero-en reveal d4" aria-hidden="true">AI · NEW PRODUCTIVE FORCES</div>
+
+      <div class="hero-kpis" id="heroKpis"></div>
+
+      <div class="scroll-cue" aria-hidden="true">SCROLL<i></i></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 核心论点 -->
+  <section class="chapter" id="thesis">
+    <div class="wrap">
+      <div class="thesis">
+        <div class="reveal-l">
+          <div class="eyebrow">核心判断</div>
+          <p class="thesis-big">
+            人工智能不是又一项"降本增效的工具"，<br>
+            而是<span class="hl">重塑生产力三要素组合方式</span>的<br>
+            通用目的技术——这正是它<span class="hl2">区别于以往任何一次技术升级</span>的地方。
+          </p>
+        </div>
+        <div class="thesis-list reveal-r d2" id="thesisList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 第一章 理论坐标 -->
+  <section class="chapter alt" id="ch-def">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-no">01</div>
+        <div class="sec-titles">
+          <h2>理论坐标：新质生产力为何以人工智能为标志</h2>
+          <p>高科技 · 高效能 · 高质量 —— 三重特征与人工智能的技术属性高度同构</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="quote-block reveal mt22">
+        <p id="defQuote"></p>
+        <div class="qb-src">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
+          <span id="defSrc"></span>
+        </div>
+      </div>
+
+      <div class="feat-grid mt34" id="featGrid"></div>
+
+      <div class="grid g-2 mt34">
+        <div class="card corner reveal-l">
+          <div class="card-title"><span class="dot"></span>官方定义的三重内涵</div>
+          <p class="card-note mt8">新质生产力"以劳动者、劳动资料、劳动对象及其优化组合的跃升为基本内涵"，人工智能对三者同时产生作用。</p>
+          <div class="mt16" id="threeElements"></div>
+        </div>
+        <div class="card corner reveal-r d2">
+          <div class="card-title"><span class="dot"></span>"人工智能+"行动：国家顶层设计</div>
+          <p class="card-note mt8">2025年8月，国务院印发《关于深入实施"人工智能+"行动的意见》（国发〔2025〕11号），部署六大重点行动与三阶段目标。</p>
+          <div class="grid g-4 mt16" style="gap:12px" id="actionGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 第二章 底座跃升 -->
+  <section class="chapter" id="ch-base">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-no">02</div>
+        <div class="sec-titles">
+          <h2>底座跃升：算力、网络与数据基础设施</h2>
+          <p>新技术要有新底座 —— 智能算力正成为像电力一样的基础供给能力</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+      <p class="chapter-intro reveal">
+        生产资料的跃升，首先体现在"新型基础设施"的规模上。算力是人工智能时代的"电力"，
+        5G与光纤网络是数据流动的"血管"，智算中心与数据集是新的"厂房与原料"。
+        滚动阅读，右侧仪表盘会随内容同步切换。
+      </p>
+
+      <div class="scrolly" id="scrollyBase">
+        <div class="scrolly-steps" id="stepsBase"></div>
+        <div class="scrolly-sticky">
+          <div class="ipanel" id="panelBase">
+            <div class="ipanel-head">
+              <div class="ip-title"><i></i>基础设施仪表盘</div>
+              <div class="ip-meta">2019 — 2026</div>
+            </div>
+            <div class="ipanel-body">
+              <div class="stack" id="stackBase"></div>
+              <div class="detail-chart" id="detailBase"></div>
+            </div>
+            <div class="ipanel-foot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
+              <span id="footBase">数据来源：工业和信息化部</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 第三章 规模扩张 -->
+  <section class="chapter alt" id="ch-scale">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-no">03</div>
+        <div class="sec-titles">
+          <h2>规模扩张：产业与经营主体的数量级变化</h2>
+          <p>从 510 亿元到 1.2 万亿元 —— 但请留意口径变化带来的"断裂点"</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+      <p class="chapter-intro reveal">
+        产业规模是生产力最直观的刻度。需要特别说明的是：中国信通院自2025年9月起启用了新的测算方法，
+        2024年及以后的数据与2019—2023年<strong>不可直接衔接</strong>。本报告在图表中以断裂标记如实呈现这一变化，
+        而不是把它抹平成一条好看的增长曲线。
+      </p>
+
+      <div class="scrolly" id="scrollyScale">
+        <div class="scrolly-steps" id="stepsScale"></div>
+        <div class="scrolly-sticky">
+          <div class="ipanel" id="panelScale">
+            <div class="ipanel-head">
+              <div class="ip-title"><i></i>产业规模仪表盘</div>
+              <div class="ip-meta">2019 — 2027E</div>
+            </div>
+            <div class="ipanel-body">
+              <div class="stack" id="stackScale"></div>
+              <div class="detail-chart" id="detailScale"></div>
+            </div>
+            <div class="ipanel-foot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
+              <span id="footScale">数据来源：中国信通院 / 工业和信息化部</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 第四章 产业转型 -->
+  <section class="chapter" id="ch-industry">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-no">04</div>
+        <div class="sec-titles">
+          <h2>产业转型：从技术供给到实体经济的效率改进</h2>
+          <p>人工智能真正的生产力意义，发生在一个个具体的车间、电站、医院与农田里</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="grid g-2 mt22" style="align-items:start">
+        <div class="card card-pad-lg corner reveal-l">
+          <div class="card-title"><span class="dot"></span>数字经济：AI 所嵌入的产业母体</div>
+          <p class="card-note mt8">数字经济规模与其占GDP比重（全口径，中国信通院）</p>
+          <div class="chart" id="chartDigitalEconomy" style="height:330px"></div>
+          <div class="src-line"><b>来源</b> 中国信通院《中国数字经济发展研究报告》(2020—2025)</div>
+        </div>
+        <div class="card card-pad-lg corner reveal-r d2">
+          <div class="card-title"><span class="dot"></span>智能制造：中国在全球产业格局中的位置</div>
+          <p class="card-note mt8">工业机器人是"人工智能+制造"最直观的物理载体，中国在保有量、安装量与机器人密度三项指标上均居世界前列</p>
+          <div class="chart" id="chartRobots" style="height:330px"></div>
+          <div class="src-line"><b>来源</b> 国际机器人联合会(IFR)《世界机器人》报告</div>
+        </div>
+      </div>
+
+      <div class="sec-head mt52 reveal">
+        <div class="sec-titles">
+          <h2 style="font-size:clamp(19px,2.2vw,26px)">行业微观样本：效率提升的八个切片</h2>
+          <p>从电网仿真到蚕桑养殖 —— 人工智能的生产力效应具有跨行业的普遍性</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+      <div class="case-grid" id="caseGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 第五章 人的维度 -->
+  <section class="chapter alt" id="ch-people">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-no">05</div>
+        <div class="sec-titles">
+          <h2>人的维度：就业结构重塑与人才供需</h2>
+          <p>劳动者是生产力中最活跃的要素 —— AI 带来的不是简单的"替代"，而是结构性重组</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="grid g-2" style="align-items:start">
+        <div class="card card-pad-lg corner reveal-l">
+          <div class="card-title"><span class="dot"></span>2025—2030年全球就业结构变动（预测）</div>
+          <p class="card-note mt8">新增 1.7 亿个岗位、消失 9200 万个岗位，净增约 7800 万个（世界经济论坛《未来就业报告2025》）</p>
+          <div class="chart" id="chartJobs" style="height:300px"></div>
+          <div class="src-line"><b>来源</b> 世界经济论坛(WEF)《Future of Jobs Report 2025》 · <span class="tag red">预测数据</span></div>
+        </div>
+        <div class="card card-pad-lg corner reveal-r d2">
+          <div class="card-title"><span class="dot"></span>中国人工智能人才供需缺口</div>
+          <p class="card-note mt8">人才缺口与岗位薪酬、需求增速</p>
+          <div id="talentPanel" class="mt16"></div>
+          <div class="src-line"><b>来源</b> 人力资源和社会保障部 / 智联招聘《2025年人工智能产业人才发展报告》</div>
+        </div>
+      </div>
+
+      <div class="grid g-2 mt34" style="align-items:start">
+        <div class="card card-pad-lg corner reveal-l">
+          <div class="card-title"><span class="dot"></span>全国"人工智能+制造"的劳动者结构变化</div>
+          <p class="card-note">自动化产线在精简一线人力的同时，对设备运维、数据分析、算法调优岗位形成新增需求。</p>
+          <div class="grid g-2 mt16" style="gap:12px" id="laborShift"></div>
+        </div>
+        <div class="card card-pad-lg corner reveal-r d2">
+          <div class="card-title"><span class="dot"></span>国际权威机构对长期影响的测算</div>
+          <p class="card-note">关于"人工智能对全要素生产率与增长贡献"的诚实说明</p>
+          <div id="tfpPanel" class="mt16"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 第六章 未来路径 -->
+  <section class="chapter" id="ch-future">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-no">06</div>
+        <div class="sec-titles">
+          <h2>未来路径："人工智能+"行动的政策路线</h2>
+          <p>从理论创新到行动部署 —— 一条清晰的时间线与三阶段量化目标</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+
+      <div class="roadmap" id="roadmap"></div>
+      <svg width="0" height="0" style="position:absolute"><defs>
+        <linearGradient id="rmGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#3d7fd6"/><stop offset="60%" stop-color="#d8ae4e"/><stop offset="100%" stop-color="#45cfe8"/>
+        </linearGradient>
+      </defs></svg>
+
+      <div class="sec-head mt52 reveal">
+        <div class="sec-titles">
+          <h2 style="font-size:clamp(19px,2.2vw,26px)">"人工智能+"六大重点行动</h2>
+          <p>《关于深入实施"人工智能+"行动的意见》（国发〔2025〕11号）</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+      <div class="radial reveal-s" id="radial"></div>
+
+      <div class="sec-head mt52 reveal">
+        <div class="sec-titles">
+          <h2 style="font-size:clamp(19px,2.2vw,26px)">政策时间轴：从国家战略到新质生产力</h2>
+          <p>2017 — 2025</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 数据诚信 -->
+  <section class="chapter alt" id="caveat">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-no">07</div>
+        <div class="sec-titles">
+          <h2>关于数据的诚实说明：五处必须提醒的口径差异</h2>
+          <p>可核查、可追溯、不美化 —— 这是数据可视化研究应有的底线</p>
+        </div>
+        <div class="sec-line"></div>
+      </div>
+      <p class="chapter-intro reveal">
+        人工智能领域的数据统计口径差异极大，同一指标在不同来源间可能出现数倍差距。
+        本报告选择如实呈现这些差异，而不是挑选最"好看"的数字。
+      </p>
+      <div class="caveats" id="caveats"></div>
+      <div class="flex between center wrapf mt34 reveal">
+        <p class="small muted">完整的数据来源清单与引用链接，请见「数据来源」页。</p>
+        <a class="btn btn-ghost" href="sources.html">查看全部 24 项数据来源
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ 结尾 -->
+  <section class="chapter">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div class="eyebrow">结语</div>
+        <h2>当算力像电力一样普及，<br>新质生产力才真正<span class="grad-text">从概念走进现实</span></h2>
+        <p>
+          人工智能之所以是新质生产力，不在于它本身是一项新技术，而在于它同时改变了劳动资料（算力与算法）、
+          劳动对象（数据）与劳动者（人机协同），并因此推动全要素生产率的系统性提升。
+          这条路径已经由基础设施的规模、产业的增速与真实场景中的效率数字所证明；
+          而其最终形态，取决于"人工智能+"行动在千行百业的落地深度。
+        </p>
+        <div class="hero-cta mt34">
+          <a class="btn btn-primary" href="deck.html">
+            查看翻页式演示
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="dashboard.html">进入数据看板</a>
+          <a class="btn btn-ghost" href="sources.html">数据来源与口径</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/vendor/echarts.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

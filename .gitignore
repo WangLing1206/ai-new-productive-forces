@@ -1,0 +1,13 @@
+# 依赖
+node_modules/
+
+# 构建产物与 QA 截图
+build/
+
+# 视频制作工作目录（ffmpeg 二进制、原始录制、成片）
+video/
+
+# 其他
+.DS_Store
+Thumbs.db
+*.log
